@@ -1,1 +1,137 @@
 
+DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Mental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Tela inicial -->
+        <div id="inicio" class="screen active">
+            <div class="card">
+                <h1>RESET MENTAL</h1>
+
+                <p>
+                    Olá, somos o Reset Mental 💙<br>
+                    Aqui você encontrará um questionário
+                    de bem-estar emocional e no final
+                    temos uns numeros caso precisar
+                   
+                </p>
+
+                <button id="startBtn">
+                    BEM-VINDO
+                </button>
+            </div>
+        </div>
+
+        <!-- Tela de perguntas -->
+        <div id="quiz" class="screen">
+            <div class="card">
+
+                <h2 id="categoria">
+                    Pergunta
+                </h2>
+
+                <div class="progress">
+                    <div id="progressBar"></div>
+                </div>
+
+                <p id="questionText"></p>
+
+                <div class="buttons">
+                    <button onclick="answer(0)">
+                        Nunca
+                    </button>
+
+                    <button onclick="answer(1)">
+                        Às vezes
+                    </button>
+
+                    <button onclick="answer(2)">
+                        Frequentemente
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resultado -->
+        <div id="resultado" class="screen">
+            <div class="card">
+
+                <h2>Seu Resultado</h2>
+
+                <div id="resultadoTexto">
+                </div>
+
+                <button onclick="abrirConversa()">
+                    precisa continuar?
+                </button>
+
+                <button onclick="restartQuiz()">
+                    vc quer tentar novamente?
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Conversa -->
+        <div id="conversa" class="screen">
+            <div class="card">
+
+                <h2>Escolha alguém</h2>
+
+                <button onclick="showDoctor(
+                'Dr.phelipe',
+                '83566777688'
+                )">
+                    Dr.phelipe
+                </button>
+
+                <button onclick="showDoctor(
+                'Dr.denilson',
+                '83864776477'
+                )">
+                    Dr.denilson
+                </button>
+
+                <button onclick="showDoctor(
+                'Dr.vitor',
+                '8376664738'
+                )">
+                    Dr.vitor
+                </button>
+
+                <button onclick="goResult()">
+                    Voltar
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Número -->
+        <div id="doctor" class="screen">
+            <div class="card">
+
+                <h2 id="doctorName"></h2>
+
+                <p id="doctorNumber"></p>
+
+                <button onclick="backConversation()">
+                    Voltar
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
